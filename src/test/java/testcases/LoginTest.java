@@ -20,13 +20,10 @@ import Pages.LoginPage;
 @Test
 public class LoginTest extends BaseClass {
 	
-WebDriver driver;
-
-	
 	@Test
 	public void LoginFailiureTest() {
 	
-	test = report.startTest("LoginFailureTest");
+	//test = report.startTest("LoginFailureTest");
 
 	LoginPage Login = new LoginPage();
 		
@@ -39,19 +36,19 @@ WebDriver driver;
 		
 	Assert.assertEquals(ActualMsg, ExpMsg);
 		
-	report.endTest(test);
+	//report.endTest(test);
 	
 	}
 	
 @Test	
 public void LoginSuccessTest() {
 
-	test = report.startTest("LoginFailureTest");
+	//test = report.startTest("LoginFailureTest");
 	
 	LoginPage Login1=new LoginPage();
 	Login1.LoginFunction("xyz@abc.com","Abc@12345");
 	
-	report.endTest(test);		
+	//report.endTest(test);		
 	
 }
 
@@ -60,18 +57,18 @@ public void LoginSuccessTest() {
 
 public void ParameterizedTest(String UserName, String Password) {
 	
-	test = report.startTest("LoginFailureTest");
+	//test = report.startTest("LoginFailureTest");
 	
 	LoginPage login = new LoginPage();
 	
 	login.LoginFunction(UserName, UserName);
 	
-	report.endTest(test);
+//	report.endTest(test);
 }
 @Test
 public void ExternalData() {
 	
-	test = report.startTest("LoginFailureTest");	
+	//test = report.startTest("LoginFailureTest");	
 	
 	String UserNameVal= sheet.getRow(1).getCell(0).getStringCellValue();
 	String Password=sheet.getRow(1).getCell(1).getStringCellValue();
@@ -79,7 +76,7 @@ public void ExternalData() {
 	LoginPage Login1=new LoginPage();
 	Login1.LoginFunction(UserNameVal,Password);
 	
-	report.endTest(test);
+	//report.endTest(test);
 		
 	}
 
